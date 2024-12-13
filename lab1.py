@@ -90,7 +90,7 @@ def disPlayScore(students, courses):
           value = student.get(course['name'], "empty") 
           subjects.append(f"{course['name']}: {value}")
 
-          subjectsToStr = " - ".join(subjects)
+          subjectsToStr = ", ".join(subjects)
 
         print(f"ID: {student['id']}, Name: {student['name']}, Courses: {subjectsToStr}")
 
@@ -103,7 +103,7 @@ def removeStu(students):
     id = int(input("Id to remove: "))
     # [students.remove(student) for student in students if int(student['id']) == id]
     for student in students:
-        if(int(student['id']) == id): students.remove(student)
+        if  (int(student['id']) == id): students.remove(student)
         else: 
             print("-------does not have id in list")
             return task()
